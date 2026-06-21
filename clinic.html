@@ -1,0 +1,380 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Clinic | The Smile Hub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-container": "#554300",
+                    "primary": "#f2ca50",
+                    "surface-tint": "#e9c349",
+                    "on-secondary-container": "#4d4635",
+                    "text-muted": "#666666",
+                    "on-secondary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed": "#241a00",
+                    "error-container": "#ffdad6",
+                    "surface-variant": "#f5f5f5",
+                    "gold-standard": "#D4AF37",
+                    "background": "#FFFFFF",
+                    "inverse-on-surface": "#f5f5f5",
+                    "surface-container": "#f8f8f8",
+                    "surface-neutral": "#FFFFFF",
+                    "on-surface-variant": "#444444",
+                    "surface-bright": "#FFFFFF",
+                    "inverse-surface": "#313030",
+                    "surface-container-lowest": "#FFFFFF",
+                    "primary-fixed": "#ffe088",
+                    "on-error": "#ffffff",
+                    "text-primary": "#1A1A1A",
+                    "outline": "#d0c5af",
+                    "on-primary": "#ffffff",
+                    "inverse-primary": "#f2ca50",
+                    "surface-dim": "#f0f0f0",
+                    "secondary": "#735c00",
+                    "outline-variant": "#e9e9e9",
+                    "secondary-fixed": "#ffe082",
+                    "on-secondary-fixed-variant": "#564500",
+                    "on-surface": "#1A1A1A",
+                    "tertiary-container": "#dbe1ff",
+                    "on-tertiary-fixed": "#00174b",
+                    "tertiary": "#254188",
+                    "primary-fixed-dim": "#e9c349",
+                    "secondary-fixed-dim": "#e1c469",
+                    "on-tertiary": "#ffffff",
+                    "background-deep": "#FFFFFF",
+                    "tertiary-fixed-dim": "#b4c5ff",
+                    "secondary-container": "#ffe088",
+                    "tertiary-fixed": "#dbe1ff",
+                    "surface-container-high": "#f0f0f0",
+                    "on-background": "#1A1A1A",
+                    "gold-light": "#F3D578",
+                    "on-primary-fixed-variant": "#574500",
+                    "surface-container-highest": "#e9e9e9",
+                    "surface-container-low": "#fafafa",
+                    "surface": "#FFFFFF",
+                    "on-secondary-fixed": "#231b00",
+                    "primary-container": "#D4AF37",
+                    "on-tertiary-fixed-variant": "#27438a",
+                    "on-tertiary-container": "#00174b",
+                    "on-error-container": "#410002"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "stack-lg": "32px",
+                    "stack-sm": "8px",
+                    "stack-md": "16px",
+                    "margin-mobile": "20px",
+                    "section-padding": "120px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "label-md": ["Montserrat"],
+                    "label-sm": ["Montserrat"],
+                    "body-lg": ["Montserrat"],
+                    "body-md": ["Montserrat"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #FFFFFF;
+            color: #1A1A1A;
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .gold-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+            opacity: 0.5;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        .bento-item {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bento-item:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.1);
+        }
+    </style>
+</head>
+<body class="font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gold-standard/20 shadow-sm transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-gutter h-20">
+<div class="font-headline-md text-headline-md text-gold-standard tracking-tighter">The Smile Hub</div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="font-label-md text-label-md uppercase tracking-widest text-on-surface hover:text-gold-standard transition-colors duration-300" href="/">Home</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-on-surface hover:text-gold-standard transition-colors duration-300" href="/about.html">About</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-on-surface hover:text-gold-standard transition-colors duration-300" href="/services.html">Services</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-gold-standard border-b-2 border-gold-standard pb-1" href="/clinic.html">Clinic</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-on-surface hover:text-gold-standard transition-colors duration-300" href="/contact.html">Contact</a>
+</div>
+<button class="bg-gold-standard text-white px-8 py-3 font-label-md text-label-md uppercase tracking-widest hover:bg-gold-light transition-colors duration-300 hidden md:inline-block">
+            Book Appointment
+        </button>
+<button id="mobile-menu-btn" class="md:hidden text-gold-standard p-2 focus:outline-none"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button></div>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-32 pb-section-padding px-gutter max-w-container-max mx-auto overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="z-10">
+<div class="flex items-center gap-4 mb-6">
+<span class="w-12 h-[1px] bg-gold-standard"></span>
+<span class="font-label-md text-label-md text-gold-standard uppercase tracking-[0.2em]">The Experience</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl mb-8 text-on-surface">Redefining the <span class="text-gold-standard">Art of Care.</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-10">
+                Step into Aurelian Dental Aesthetic, where clinical precision meets unparalleled luxury. Our space is meticulously designed to evoke the tranquility of a high-end spa, ensuring your journey to a perfect smile is as refined as the result itself.
+            </p>
+<div class="flex gap-6">
+<button class="px-10 py-4 bg-gold-standard text-white font-label-md text-label-md uppercase tracking-widest hover:bg-gold-light transition-all">Start the Tour</button>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-[4/5] w-full bento-item overflow-hidden shadow-2xl rounded-lg">
+<img alt="The Reception" class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLsHvvZ12peYQQJSZQuVaj71HhHTLBsJqZrg19gluGVmU0Y8gV4ohikyznQgeGJwZi6QjACQuPHijuX5qvOuIdYd_2H1E_MUt81KZTvM2C_vzN-TNLMJe1i_VV0GWHBf1fYWzNcYyXvBtFRTtfVBqjTBQs-jmNRd56P1r9VW7qs2YiCiXEDQKw5szf7ocVM88oBdxgCyd3klGGcn6146A2MMdI7Gw8qymWz2C_wyampj6MoT5uWn8sNT1ohO">
+</div>
+<div class="absolute -bottom-8 -left-8 p-8 glass-card border-l-4 border-l-gold-standard">
+<div class="font-headline-md text-headline-md mb-2 text-on-surface">01</div>
+<div class="font-label-md text-label-md uppercase tracking-widest text-gold-standard">The Concierge Lounge</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Bento Gallery Section -->
+<section class="py-section-padding bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-20">
+<h2 class="font-headline-lg text-headline-lg mb-4 text-on-surface">Architecture of Wellness</h2>
+<div class="gold-divider w-24 mx-auto mb-6"></div>
+<p class="font-body-md text-body-md text-text-muted max-w-2xl mx-auto">Every corner of our clinic is engineered for safety, serenity, and surgical perfection.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[900px]">
+<!-- Treatment Room -->
+<div class="md:col-span-8 bento-item group cursor-pointer rounded-lg">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 z-10"></div>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" data-alt="A futuristic, high-end dental treatment room..." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC37KQa69-q7IMgoF9NZ4BuKc5raQ79zZIKURu9Oiefbqui6ggsaSauVHCsJEmPBuUt5MGLc7AiHoF5H2u-rVRQYs1l6dYe2Pp0Kh2ktdNS4aJKrd8q2IRILdzx0Bh5e0-uqZJK80v4A6tPGmqV6XVTP1o7Hmf3pL7WJRe7t6JdB91fISYjX9mfTB1h-y5Kj72TrpARE0QEDdWf6YpYPtzFgw4kTxlM6rzRSMk4TfXM4LeKYA0WKnyQ0lcHEiGxCTucv6c6BYF5qIp">
+<div class="absolute bottom-0 left-0 p-10 z-20">
+<h3 class="font-headline-md text-headline-md text-white mb-2">Surgical Suites</h3>
+<p class="font-body-md text-white/80 max-w-md">Private, acoustically-treated rooms equipped with the latest Zeiss optics and noise-cancelling technology.</p>
+</div>
+</div>
+<!-- Sterilization -->
+<div class="md:col-span-4 bento-item group cursor-pointer rounded-lg">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 z-10"></div>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" data-alt="A hospital-grade dental sterilization laboratory..." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu6O5XhXbYWbO_XCEDuHAfPjso7UVUU8Ft7sbOnuCm-BqitiZGWjOU-wdzPpEQz4EbEEv-RzOhHStZt4GMLShYmJymW5j-xdk6krG170DxuaMaRetRKFTazT549A_DZG_b0qlHU1GAqtcYA9kZ8p_NtcW-2aofGcB2t2V4LdYFpBQ1jUw9oZOV-0WDRvDCSqscbqQeq9TDwEciXFuotbgWeABtjQIEbeg-iw9zyRG_FZShLsZUMxhx4Q4AAzNRYetzcQGaNmLdrYKk">
+<div class="absolute bottom-0 left-0 p-8 z-20">
+<h3 class="font-headline-md text-headline-md text-white mb-2">Bio-Security</h3>
+<p class="font-body-sm text-white/80">Hospital-grade sterilization beyond industry standards.</p>
+</div>
+</div>
+<!-- Coffee Bar / Concierge -->
+<div class="md:col-span-4 bento-item group cursor-pointer rounded-lg">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 z-10"></div>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" data-alt="A boutique coffee and refreshment bar..." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDTAO7Z-OeDKRnzh0GK6dXwuQDKJ_Vy98tNJ5dNG64wPOXvtDZo2_hEESrQ0an2uTSAr7SdSuTwdMEjuht_UhVaAgBlAsQjG3W4yGqzpXmVeldTunz2inS2AEw4KCRXxr_A80KJfiU4w7TUB8JtMtYF1XHLGE923-OiIO2bw5f5TBbID-w5lXtUkm6T51qtuF2O1f4xUFXffnbbtRvUMkmoQQizAX0cq7pVXOpJqbcGt-TlHZ9lN3arfhjagVt7A5plEaB-u834VBa">
+<div class="absolute bottom-0 left-0 p-8 z-20">
+<h3 class="font-headline-md text-headline-md text-white mb-2">Hospitality</h3>
+<p class="font-body-sm text-white/80">Signature espresso and aromatherapy rituals.</p>
+</div>
+</div>
+<!-- Advanced Tech -->
+<div class="md:col-span-8 bento-item group cursor-pointer rounded-lg">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 z-10"></div>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" data-alt="Close up of advanced dental imaging technology..." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClqWjmW7Dmj0XzA_FghUlSyc1NijevEdC4WccBhmqARXdJ7bnmIbu1B8uF2x8rw6kI_QUDZbXl_QryrXfXjzqwGt98CzegmZbSwWEyeG7QPAaJOc9n3BLrIgunEaZ5HGquGUUPa35ni2G52ITEgVTY_xLTnffLmjfVJpkce6pEFJUMqdq9E9n2Dip3rIxe3BpfnQ95SAebkMVY0fd42jnNpyI8Plv1gZzg2hpccnijJqMSlivwnP3N6VnQGsUNVc6RFFlRC-z6INKQ">
+<div class="absolute bottom-0 left-0 p-10 z-20">
+<h3 class="font-headline-md text-headline-md text-white mb-2">Digital Laboratory</h3>
+<p class="font-body-md text-white/80 max-w-md">On-site 3D milling and AI-driven diagnostic imaging for same-day precision results.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Pillars -->
+<section class="py-section-padding px-gutter max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="flex flex-col items-center text-center p-8 border-r border-gold-standard/10 last:border-0">
+<div class="mb-6">
+<span class="material-symbols-outlined text-4xl text-gold-standard">spa</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-4 text-on-surface">Sensory Calm</h4>
+<p class="font-body-md text-text-muted">From temperature-controlled blankets to curated ambient soundscapes, every sense is catered to reduce clinical anxiety.</p>
+</div>
+<div class="flex flex-col items-center text-center p-8 border-r border-gold-standard/10 last:border-0">
+<div class="mb-6">
+<span class="material-symbols-outlined text-4xl text-gold-standard">clean_hands</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-4 text-on-surface">Sterile Mastery</h4>
+<p class="font-body-md text-text-muted">Our Class-B autoclave and UV-C air filtration systems ensure a clinical environment that exceeds hospital-grade protocols.</p>
+</div>
+<div class="flex flex-col items-center text-center p-8 border-r border-gold-standard/10 last:border-0">
+<div class="mb-6">
+<span class="material-symbols-outlined text-4xl text-gold-standard">concierge</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-4 text-on-surface">Concierge Flow</h4>
+<p class="font-body-md text-text-muted">Direct bedside check-out and private entry-exit paths for our VIP patients ensuring maximum discretion.</p>
+</div>
+</div>
+</section>
+<!-- Call to Action / Appointment -->
+<section class="py-section-padding bg-surface-container-lowest">
+<div class="max-w-4xl mx-auto px-gutter relative">
+<div class="glass-card p-16 text-center relative z-10 border-t-2 border-t-gold-standard rounded-lg">
+<h2 class="font-headline-lg text-headline-lg mb-6 text-on-surface">Begin Your Transformation</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">Experience dentistry as it was meant to be—luxurious, precise, and entirely focused on you.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-gold-standard text-white px-12 py-5 font-label-md text-label-md uppercase tracking-widest hover:bg-gold-light transition-all font-bold shadow-lg">Request Private Tour</button>
+<button class="border border-gold-standard text-gold-standard px-12 py-5 font-label-md text-label-md uppercase tracking-widest hover:bg-gold-standard/5 transition-all">View All Services</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-white border-t border-gold-standard/20 w-full pt-stack-lg pb-stack-md">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto px-gutter text-center md:text-left">
+<div class="md:col-span-1">
+<div class="font-headline-md text-headline-md text-gold-standard mb-6">The Smile Hub</div>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-80 mb-6">Excellence in Modern Dentistry. Where aesthetics meets medical precision.</p>
+</div>
+<div class="md:col-span-1">
+<h5 class="font-label-md text-label-md uppercase tracking-widest text-gold-standard mb-6">Services</h5>
+<ul class="space-y-4 font-body-md text-on-surface-variant">
+<li><a class="hover:text-gold-standard transition-colors" href="#">Cosmetic Veneers</a></li>
+<li><a class="hover:text-gold-standard transition-colors" href="#">Oral Surgery</a></li>
+<li><a class="hover:text-gold-standard transition-colors" href="#">Laser Whitening</a></li>
+<li><a class="hover:text-gold-standard transition-colors" href="#">Dental Implants</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h5 class="font-label-md text-label-md uppercase tracking-widest text-gold-standard mb-6">Location</h5>
+<p class="font-body-md text-on-surface-variant opacity-80">
+                Aurelian Plaza, Suite 400<br>
+                Elite District, MD 20854<br>
+                Mon - Sat: 9:00 - 18:00
+            </p>
+</div>
+<div class="md:col-span-1">
+<h5 class="font-label-md text-label-md uppercase tracking-widest text-gold-standard mb-6">Contact</h5>
+<p class="font-body-md text-on-surface-variant opacity-80 mb-2">Concierge: +1 (555) 012-3456</p>
+<p class="font-body-md text-on-surface-variant opacity-80 mb-8">Email: private@lumine.com</p>
+<div class="flex justify-center md:justify-start gap-4">
+<span class="material-symbols-outlined text-gold-standard hover:opacity-100 opacity-60 cursor-pointer transition-all">public</span>
+<span class="material-symbols-outlined text-gold-standard hover:opacity-100 opacity-60 cursor-pointer transition-all">share</span>
+<span class="material-symbols-outlined text-gold-standard hover:opacity-100 opacity-60 cursor-pointer transition-all">photo_camera</span>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter mt-20 pt-8 border-t border-gold-standard/10 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 The Smile Hub. Excellence in Modern Dentistry.</p>
+<div class="flex gap-8">
+<a class="text-on-surface-variant hover:text-gold-standard transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-gold-standard transition-colors" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-gold-standard transition-colors" href="#">Patient Portal</a>
+</div>
+</div>
+</footer>
+<script>
+    // Simple Scroll Animation Observer
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100');
+                entry.target.classList.remove('opacity-0', 'translate-y-10');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.bento-item').forEach(el => {
+        el.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-1000');
+        observer.observe(el);
+    });
+
+    // Navbar interaction
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        const nav = document.querySelector('nav');
+        
+        if (currentScroll <= 0) {
+            nav.classList.remove('-translate-y-full');
+            return;
+        }
+        
+        if (currentScroll > lastScroll) {
+            nav.classList.add('-translate-y-full');
+        } else {
+            nav.classList.remove('-translate-y-full');
+        }
+        lastScroll = currentScroll;
+    });
+</script>
+<div id="mobile-menu" class="fixed inset-0 bg-background z-40 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col pt-24 px-gutter shadow-2xl overflow-y-auto">
+            <button id="close-menu-btn" class="absolute top-6 right-gutter text-gold-standard p-2 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <div class="flex flex-col mt-8">
+                <a href="/" class="block text-xl font-headline text-on-surface hover:text-gold-standard py-4 border-b border-gold-standard/10">Home</a><a href="/about.html" class="block text-xl font-headline text-on-surface hover:text-gold-standard py-4 border-b border-gold-standard/10">About</a><a href="/services.html" class="block text-xl font-headline text-on-surface hover:text-gold-standard py-4 border-b border-gold-standard/10">Services</a><a href="/clinic.html" class="block text-xl font-headline text-on-surface hover:text-gold-standard py-4 border-b border-gold-standard/10">Clinic</a><a href="/contact.html" class="block text-xl font-headline text-on-surface hover:text-gold-standard py-4 border-b border-gold-standard/10">Contact</a>
+            </div>
+            <div class="mt-8 mb-8">
+                <button class="w-full bg-gold-standard text-white py-4 rounded-four uppercase tracking-widest font-bold">Book Appointment</button>
+            </div>
+        </div><script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const menuBtn = document.getElementById('mobile-menu-btn');
+                const closeBtn = document.getElementById('close-menu-btn');
+                const mobileMenu = document.getElementById('mobile-menu');
+                
+                if(menuBtn && closeBtn && mobileMenu) {
+                    menuBtn.addEventListener('click', () => {
+                        mobileMenu.classList.remove('translate-x-full');
+                    });
+                    closeBtn.addEventListener('click', () => {
+                        mobileMenu.classList.add('translate-x-full');
+                    });
+                }
+            });
+        </script></body></html>

@@ -1,0 +1,415 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>About Us | Aurelian Dental Aesthetic</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-container": "#554300",
+                    "primary": "#f2ca50",
+                    "surface-tint": "#e9c349",
+                    "on-secondary-container": "#eccf73",
+                    "text-muted": "#666666",
+                    "on-secondary": "#3c2f00",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed": "#241a00",
+                    "error-container": "#ffdad6",
+                    "surface-variant": "#f4f4f4",
+                    "gold-standard": "#D4AF37",
+                    "background": "#FFFFFF",
+                    "inverse-on-surface": "#f4f0ef",
+                    "surface-container": "#f8f8f8",
+                    "surface-neutral": "#fcfcfc",
+                    "on-surface-variant": "#4d4635",
+                    "surface-bright": "#ffffff",
+                    "inverse-surface": "#313030",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#ffe088",
+                    "on-error": "#ffffff",
+                    "text-primary": "#1A1A1A",
+                    "outline": "#85736e",
+                    "on-primary": "#ffffff",
+                    "inverse-primary": "#f2ca50",
+                    "surface-dim": "#ded8d7",
+                    "secondary": "#6d5e00",
+                    "outline-variant": "#d8c2be",
+                    "secondary-fixed": "#ffe082",
+                    "on-secondary-fixed-variant": "#564500",
+                    "on-surface": "#131313",
+                    "tertiary-container": "#dbe1ff",
+                    "on-tertiary-fixed": "#00174b",
+                    "tertiary": "#3e5aa9",
+                    "primary-fixed-dim": "#e9c349",
+                    "secondary-fixed-dim": "#e1c469",
+                    "on-tertiary": "#ffffff",
+                    "background-deep": "#FBFBFB",
+                    "tertiary-fixed-dim": "#b4c5ff",
+                    "secondary-container": "#f2ca50",
+                    "tertiary-fixed": "#dbe1ff",
+                    "surface-container-high": "#ebebeb",
+                    "on-background": "#1c1b1b",
+                    "gold-light": "#F3D578",
+                    "on-primary-fixed-variant": "#574500",
+                    "surface-container-highest": "#e2e2e2",
+                    "surface-container-low": "#f7f2f1",
+                    "surface": "#ffffff",
+                    "on-secondary-fixed": "#231b00",
+                    "primary-container": "#ffe088",
+                    "on-tertiary-fixed-variant": "#27438a",
+                    "on-tertiary-container": "#00174b",
+                    "on-error-container": "#410002"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "stack-lg": "32px",
+                    "stack-sm": "8px",
+                    "stack-md": "16px",
+                    "margin-mobile": "20px",
+                    "section-padding": "120px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "label-md": ["Montserrat"],
+                    "label-sm": ["Montserrat"],
+                    "body-lg": ["Montserrat"],
+                    "body-md": ["Montserrat"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #FFFFFF;
+            color: #1A1A1A;
+            overflow-x: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(to right, #D4AF37, #C5A028);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .section-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .section-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="font-body-md selection:bg-gold-standard selection:text-white">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gold-standard/20 shadow-sm transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-gutter h-20">
+<div class="font-headline-md text-headline-md text-gold-standard tracking-tighter">The Smile Hub</div>
+<div class="hidden md:flex items-center space-x-10">
+<a class="font-label-md text-label-md uppercase tracking-widest text-on-surface hover:text-gold-standard transition-colors duration-300" href="/">Home</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-on-surface hover:text-gold-standard transition-colors duration-300" href="/about.html">About</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-on-surface hover:text-gold-standard transition-colors duration-300" href="/services.html">Services</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-on-surface hover:text-gold-standard transition-colors duration-300" href="/clinic.html">Clinic</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-on-surface hover:text-gold-standard transition-colors duration-300" href="/contact.html">Contact</a>
+</div>
+<button class="bg-gold-standard text-white font-label-md text-label-md px-6 py-3 uppercase tracking-widest hover:bg-gold-standard/90 transition-all duration-300 shadow-sm hidden md:inline-block">
+            Book Appointment
+        </button>
+<button id="mobile-menu-btn" class="md:hidden text-gold-standard p-2 focus:outline-none"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button></div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-[80vh] flex items-center justify-center pt-24 overflow-hidden bg-background-deep">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-b from-white/80 via-white/40 to-white z-10"></div>
+<div class="w-full h-full bg-[url('placeholder')] bg-cover bg-fixed opacity-20" data-alt="A macro cinematic shot of a clean, hyper-modern dental laboratory with soft focus on precision tools. The lighting is low-key with golden rim highlights, creating a luxurious and clinical atmosphere. Subtle lens flares and a deep charcoal background emphasize the premium quality of the clinical space."></div>
+</div>
+<div class="relative z-20 max-w-4xl mx-auto px-gutter text-center">
+<span class="inline-block h-12 w-[2px] bg-gold-standard mb-8"></span>
+<h1 class="font-headline-xl text-headline-xl mb-6 leading-tight text-on-surface">Masterful Artistry &amp; <br><span class="gold-gradient-text">Uncompromising Care</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12">
+            At Aurelian Dental Aesthetic, we don't just treat smiles; we curate them. Discover the fusion of clinical excellence and bespoke artistry.
+        </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+<button class="bg-gold-standard text-white font-label-md text-label-md px-10 py-4 uppercase tracking-widest hover:bg-gold-standard/90 transition-all shadow-sm">Our Philosophy</button>
+<button class="border border-gold-standard text-gold-standard font-label-md text-label-md px-10 py-4 uppercase tracking-widest hover:bg-gold-standard/5 transition-all">Meet the Team</button>
+</div>
+</div>
+</header>
+<!-- Our Philosophy - Bento Grid -->
+<section class="py-section-padding bg-white">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
+<div class="max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg mb-6 text-on-surface">The Aurelian Philosophy</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">We believe that dentistry is the ultimate intersection of healthcare and aesthetics. Every treatment is a bespoke creation designed to honor your unique anatomy and elevate your confidence.</p>
+</div>
+<div class="hidden md:block h-[1px] flex-grow bg-gold-standard/20 mx-12 mb-4"></div>
+<div class="flex items-center gap-2 text-gold-standard">
+<span class="font-label-md text-label-md uppercase tracking-tighter">Established 2012</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="glass-panel p-10 group hover:border-gold-standard/50 transition-all duration-500 flex flex-col justify-between min-h-[400px] shadow-sm">
+<div>
+<div class="mb-8 text-gold-standard">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 0;">brush</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-on-surface">Clinical Artistry</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Our practitioners treat every crown, veneer, and alignment as a sculpture, ensuring natural results that mirror biological perfection.</p>
+</div>
+<div class="mt-8 overflow-hidden">
+<div class="h-[1px] w-0 bg-gold-standard group-hover:w-full transition-all duration-700"></div>
+</div>
+</div>
+<!-- Card 2 (Large Middle) -->
+<div class="glass-panel p-10 group border-t-2 border-t-gold-standard transition-all duration-500 flex flex-col justify-between min-h-[400px] shadow-md bg-surface-neutral">
+<div>
+<div class="mb-8 text-gold-standard">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-on-surface">Gold Standard Quality</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">We utilize only the highest grade biocompatible materials and the world's most advanced digital imaging technologies for absolute precision.</p>
+</div>
+<div class="mt-8 h-40 bg-[url('placeholder')] bg-cover bg-center rounded-sm opacity-90" data-alt="A close-up, high-fashion shot of dental porcelain textures under warm museum lighting. The image emphasizes the iridescent quality and detailed craftsmanship of high-end dental restorative materials against a dark, minimalist background. Gold accents from reflections suggest a premium, artisanal quality."></div>
+</div>
+<!-- Card 3 -->
+<div class="glass-panel p-10 group hover:border-gold-standard/50 transition-all duration-500 flex flex-col justify-between min-h-[400px] shadow-sm">
+<div>
+<div class="mb-8 text-gold-standard">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 0;">spa</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-on-surface">Bespoke Comfort</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Your visit is designed to be an oasis of calm. From noise-cancelling acoustics to aromatic therapy, your comfort is never an afterthought.</p>
+</div>
+<div class="mt-8 overflow-hidden">
+<div class="h-[1px] w-0 bg-gold-standard group-hover:w-full transition-all duration-700"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Dr. Sarah Mitchell Spotlight -->
+<section class="py-section-padding bg-surface-neutral">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+<div class="w-full lg:w-1/2 relative">
+<div class="absolute border-l-2 border-t-2 border-gold-standard/20 w-20 h-20 md:w-40 md:h-40 -top-4 -left-4 md:-top-10 md:-left-10"></div>
+<div class="relative z-10 aspect-[1.43] overflow-hidden shadow-xl rounded-sm">
+<img alt="Dr. Sarah Mitchell" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLtgDdRVR-EHMu01yshbFEQIOwPQ1kyFTLuvAURROzoFrefol3Zh-FRdZozM2_Ix6bRWdyOhcLncuFzvm_o_7kfZD4_5dqO9RmwEdjZG9NNrXOIOhNGBA9B8l9MjnhnSUbDy7qwNow1ZIBv0PDEMharvnbaOtgjSy77NWVf3wz4I2VuL8q3RxvsiiwaJ20QP7Ec2o6K1A7TN0CiGUg8iNdOO7YokcoKCKfbXNztp3DzIi5zNT0bq4qhKmwg">
+</div>
+<div class="absolute -bottom-6 -right-6 bg-gold-standard text-white p-6 z-20 shadow-lg">
+<p class="font-label-md text-label-md uppercase font-bold tracking-widest">Lead Specialist</p>
+</div>
+</div>
+<div class="w-full lg:w-1/2">
+<span class="text-gold-standard font-label-md text-label-md uppercase tracking-[0.3em] mb-6 block">The Visionary</span>
+<h2 class="font-headline-lg text-headline-lg mb-8 text-on-surface">Dr. Sarah Mitchell <br><span class="text-body-lg font-body-lg text-on-surface-variant opacity-70 italic">DDS, MS - Cosmetic Lead</span></h2>
+<div class="space-y-6 font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<p>With over 15 years of experience in restorative and cosmetic dentistry, Dr. Mitchell founded Aurelian on the principle that clinical excellence should never be cold or clinical.</p>
+<p>A graduate of the world's most prestigious dental institutes, her work is defined by an obsession with detail and a passion for reconstructive harmony. She views every smile as a unique journey, requiring both scientific rigor and a designer's eye.</p>
+<ul class="pt-6 space-y-4">
+<li class="flex items-center gap-4">
+<span class="material-symbols-outlined text-gold-standard">check_circle</span>
+<span class="text-on-surface">Fellow of the International Congress of Oral Implantologists</span>
+</li>
+<li class="flex items-center gap-4">
+<span class="material-symbols-outlined text-gold-standard">check_circle</span>
+<span class="text-on-surface">Master in Aesthetic Rehabilitation</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Team Section -->
+<section class="py-section-padding bg-background-deep overflow-hidden">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-24">
+<h2 class="font-headline-lg text-headline-lg mb-4 text-on-surface">The Aurelian Collective</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto">Our team of specialists works in seamless coordination to provide multi-disciplinary care under one roof.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Team Member 1 -->
+<div class="group">
+<div class="relative overflow-hidden mb-6 aspect-[4/5] bg-surface-container shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 grayscale group-hover:grayscale-0" data-alt="A professional portrait of a male orthodontist in a modern dark scrub suit, looking friendly and professional. The studio lighting is soft and high-end, against a deep grey textured wall. The aesthetic is sharp, clean, and clinical luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqndaU4u8C_Y-NU2JwJPdgJbrdyVrrkV2klSm6MoZk54JAbKB_0hR86DHZvdXYHg06LfgifumHWptEpVJ2Z-nITM8x9hgV4-Mhi-MoZVi6v4FjqpcLfHBW4bDHd_p0TGYkNPfY8k9MGXCpHYF2Weecqbxf_griZafDyYDOdaAUbLJyNSk7k1h4tEwr4SKLJrjxLzUvv-kofRn5cJonpjeJHYo31rWsdBcNhulplHekJrp4DC35s6AtVKMrmQpRxavOMpx1oE2VVO1z">
+<div class="absolute inset-0 bg-gradient-to-t from-white/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+<div class="flex gap-4">
+<a class="text-gold-standard hover:text-on-surface" href="#"><span class="material-symbols-outlined">link</span></a>
+</div>
+</div>
+</div>
+<h4 class="font-label-md text-label-md uppercase tracking-widest text-gold-standard">Dr. James Chen</h4>
+<p class="text-on-surface-variant text-sm mt-1">Orthodontic Specialist</p>
+</div>
+<!-- Team Member 2 -->
+<div class="group">
+<div class="relative overflow-hidden mb-6 aspect-[4/5] bg-surface-container shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 grayscale group-hover:grayscale-0" data-alt="A professional portrait of a female periodontist in minimalist medical attire, standing in a brightly lit corridor of a modern dental clinic. She has a confident and welcoming expression. The background is slightly blurred showing high-end medical equipment and warm lighting accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq2fQQu0XBG2aRHIwbBHy3BXSFikb-tX-qo-CQ_coG2NLXUx8pS_Kr13h0Djsao3MDSdhT4JQLC7YVAa6WQzY71E7rXWFuo04IAApvTwxvS9jljwq1MRhaS5Iydu-Uj9zuL7eKk1qI7pxdBckvOR2NQJwplTj2zeguhazYjCIUfkfviygCLtJVkwp9XuI73K2BTrwIiIWX997r50i6RiKPjTJXsx76mgWUnLCI--BcK_YG7EhV6s0EZ6hZvL_N2paOI6CEgR21_egc">
+<div class="absolute inset-0 bg-gradient-to-t from-white/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+<div class="flex gap-4">
+<a class="text-gold-standard hover:text-on-surface" href="#"><span class="material-symbols-outlined">link</span></a>
+</div>
+</div>
+</div>
+<h4 class="font-label-md text-label-md uppercase tracking-widest text-gold-standard">Dr. Elena Rodriguez</h4>
+<p class="text-on-surface-variant text-sm mt-1">Periodontal Health</p>
+</div>
+<!-- Team Member 3 -->
+<div class="group">
+<div class="relative overflow-hidden mb-6 aspect-[4/5] bg-surface-container shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 grayscale group-hover:grayscale-0" data-alt="A portrait of a senior male dental surgeon with a professional and calm demeanor. He is wearing a dark, well-fitted clinical jacket. The lighting highlights his features with a sophisticated, warm glow, set against a dark architectural clinic background. High-contrast luxury photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS_9mzRemLCsLuQs8DpDSgxYu-G7nj_fw5DBxY3vO6rm95ND09tYjDwFH124r-vUXozMmxlHZrzSr3OsLgne0nxq3O9TEUM5vQPSsKOSmy6t1PB6gZP3gY3KwpEBsQMv_5V8qyIS9_a-Oy8S6m--67hXvt0cIv9ICPIrMHThOg97qkTUSyRQpJrc2g59KlzQyirBRV_XlFgxB0JJidoMnxa1VxFJBvMVuSqbdmeD4blXDknTbVt81AyNVzAe2WF7Sf-EOiWBWQPEtB">
+<div class="absolute inset-0 bg-gradient-to-t from-white/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+<div class="flex gap-4">
+<a class="text-gold-standard hover:text-on-surface" href="#"><span class="material-symbols-outlined">link</span></a>
+</div>
+</div>
+</div>
+<h4 class="font-label-md text-label-md uppercase tracking-widest text-gold-standard">Dr. Robert Vance</h4>
+<p class="text-on-surface-variant text-sm mt-1">Oral Surgeon</p>
+</div>
+<!-- Team Member 4 -->
+<div class="group">
+<div class="relative overflow-hidden mb-6 aspect-[4/5] bg-surface-container shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 grayscale group-hover:grayscale-0" data-alt="A portrait of a female luxury patient coordinator in a stylish black professional dress. She is smiling warmly in a beautifully designed clinic lobby with gold accents and marble surfaces. The aesthetic is welcoming, elegant, and perfectly aligned with a high-end boutique service." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgv2m70ckBtL86h4ACxgcQt5RbQlA2hym_lA4rZdLsXdStzv2zus_OFWoECiU-hzerZz6lqPa8EIwBQxOl3Z7T5WdVfhl07gPX6GkxGmz2q1J5wEcQAcp96VAuWKFovYp-XORa8djRyShbCWHx9euSvvHEsXVrtFvrrgiHVuSrn6dwSXnrt-0mLoFp4BtIxT7GxrpySwCuOf1NgRj1MEBrIuZuQV7OtW3EK-0qvTglufpC3gfyLduFuOI12LulM59LK6gM-TOtkVVY">
+<div class="absolute inset-0 bg-gradient-to-t from-white/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+<div class="flex gap-4">
+<a class="text-gold-standard hover:text-on-surface" href="#"><span class="material-symbols-outlined">link</span></a>
+</div>
+</div>
+</div>
+<h4 class="font-label-md text-label-md uppercase tracking-widest text-gold-standard">Sofia Laurent</h4>
+<p class="text-on-surface-variant text-sm mt-1">Patient Experience Director</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-white border-t border-gold-standard/20 w-full pt-stack-lg pb-stack-md">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto px-gutter text-center md:text-left">
+<div class="space-y-4">
+<div class="font-headline-md text-headline-md text-gold-standard">The Smile Hub</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Redefining modern dentistry through the lens of luxury and precision.</p>
+</div>
+<div class="flex flex-col space-y-3">
+<h5 class="font-label-md text-label-md text-on-surface uppercase tracking-widest mb-2 border-b border-gold-standard/10 pb-2">Practice</h5>
+<a class="text-on-surface-variant hover:text-gold-standard transition-colors duration-200" href="#">Our Story</a>
+<a class="text-on-surface-variant hover:text-gold-standard transition-colors duration-200" href="#">Treatments</a>
+<a class="text-on-surface-variant hover:text-gold-standard transition-colors duration-200" href="#">Technology</a>
+<a class="text-on-surface-variant hover:text-gold-standard transition-colors duration-200" href="#">Journal</a>
+</div>
+<div class="flex flex-col space-y-3">
+<h5 class="font-label-md text-label-md text-on-surface uppercase tracking-widest mb-2 border-b border-gold-standard/10 pb-2">Patients</h5>
+<a class="text-on-surface-variant hover:text-gold-standard transition-colors duration-200" href="#">Patient Portal</a>
+<a class="text-on-surface-variant hover:text-gold-standard transition-colors duration-200" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-gold-standard transition-colors duration-200" href="#">Accessibility</a>
+<a class="text-on-surface-variant hover:text-gold-standard transition-colors duration-200" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col space-y-4">
+<h5 class="font-label-md text-label-md text-on-surface uppercase tracking-widest mb-2 border-b border-gold-standard/10 pb-2">Inquiries</h5>
+<p class="text-on-surface-variant">concierge@luminedental.com</p>
+<div class="flex justify-center md:justify-start gap-4">
+<span class="material-symbols-outlined text-gold-standard cursor-pointer opacity-80 hover:opacity-100 transition-all">share</span>
+<span class="material-symbols-outlined text-gold-standard cursor-pointer opacity-80 hover:opacity-100 transition-all">chat</span>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter mt-20 pt-8 border-t border-gold-standard/5 text-center">
+<p class="font-body-md text-body-md text-on-surface-variant/60">© 2024 The Smile Hub. Excellence in Modern Dentistry.</p>
+</div>
+</footer>
+<script>
+    // Smooth scroll reveal effect
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('section').forEach(section => {
+        section.classList.add('section-reveal');
+        observer.observe(section);
+    });
+
+    // Navigation scroll effect
+    window.addEventListener('scroll', () => {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 50) {
+            nav.classList.add('h-16');
+            nav.classList.remove('h-20');
+        } else {
+            nav.classList.add('h-20');
+            nav.classList.remove('h-16');
+        }
+    });
+</script>
+<div id="mobile-menu" class="fixed inset-0 bg-background z-40 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col pt-24 px-gutter shadow-2xl overflow-y-auto">
+            <button id="close-menu-btn" class="absolute top-6 right-gutter text-gold-standard p-2 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <div class="flex flex-col mt-8">
+                <a href="/" class="block text-xl font-headline text-on-surface hover:text-gold-standard py-4 border-b border-gold-standard/10">Home</a><a href="/about.html" class="block text-xl font-headline text-on-surface hover:text-gold-standard py-4 border-b border-gold-standard/10">About</a><a href="/services.html" class="block text-xl font-headline text-on-surface hover:text-gold-standard py-4 border-b border-gold-standard/10">Services</a><a href="/clinic.html" class="block text-xl font-headline text-on-surface hover:text-gold-standard py-4 border-b border-gold-standard/10">Clinic</a><a href="/contact.html" class="block text-xl font-headline text-on-surface hover:text-gold-standard py-4 border-b border-gold-standard/10">Contact</a>
+            </div>
+            <div class="mt-8 mb-8">
+                <button class="w-full bg-gold-standard text-white py-4 rounded-four uppercase tracking-widest font-bold">Book Appointment</button>
+            </div>
+        </div><script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const menuBtn = document.getElementById('mobile-menu-btn');
+                const closeBtn = document.getElementById('close-menu-btn');
+                const mobileMenu = document.getElementById('mobile-menu');
+                
+                if(menuBtn && closeBtn && mobileMenu) {
+                    menuBtn.addEventListener('click', () => {
+                        mobileMenu.classList.remove('translate-x-full');
+                    });
+                    closeBtn.addEventListener('click', () => {
+                        mobileMenu.classList.add('translate-x-full');
+                    });
+                }
+            });
+        </script></body></html>

@@ -1,0 +1,422 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Contact | The Smile Hub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&amp;family=Montserrat:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+        }
+        body {
+            background-color: #ffffff;
+            color: #1a1a1a;
+            overflow-x: hidden;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #D4AF37 0%, #F3D578 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05);
+        }
+        .form-input-focus:focus {
+            border-color: #D4AF37;
+            box-shadow: 0 0 0 1px #D4AF37;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#554300",
+                        "primary": "#D4AF37",
+                        "surface-tint": "#e9c349",
+                        "on-secondary-container": "#eccf73",
+                        "text-muted": "#666666",
+                        "on-secondary": "#3c2f00",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#241a00",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#f1f1f1",
+                        "gold-standard": "#D4AF37",
+                        "background": "#ffffff",
+                        "inverse-on-surface": "#f4f0ef",
+                        "surface-container": "#f7f7f7",
+                        "surface-neutral": "#ffffff",
+                        "on-surface-variant": "#4d4635",
+                        "surface-bright": "#fdfdfd",
+                        "inverse-surface": "#313030",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#ffe088",
+                        "on-error": "#ffffff",
+                        "text-primary": "#1a1a1a",
+                        "outline": "#85766a",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#e9c349",
+                        "surface-dim": "#ded9d7",
+                        "secondary": "#6d5e00",
+                        "outline-variant": "#d8c4b0",
+                        "secondary-fixed": "#ffe082",
+                        "on-secondary-fixed-variant": "#564500",
+                        "on-surface": "#1a1a1a",
+                        "tertiary-container": "#dbe1ff",
+                        "on-tertiary-fixed": "#00174b",
+                        "tertiary": "#254188",
+                        "primary-fixed-dim": "#e9c349",
+                        "secondary-fixed-dim": "#e1c469",
+                        "on-tertiary": "#ffffff",
+                        "background-deep": "#fafafa",
+                        "tertiary-fixed-dim": "#b4c5ff",
+                        "secondary-container": "#6d5700",
+                        "tertiary-fixed": "#dbe1ff",
+                        "surface-container-high": "#ebebeb",
+                        "on-background": "#1a1a1a",
+                        "gold-light": "#F3D578",
+                        "on-primary-fixed-variant": "#574500",
+                        "surface-container-highest": "#e3e3e3",
+                        "surface-container-low": "#f7f7f7",
+                        "surface": "#ffffff",
+                        "on-secondary-fixed": "#231b00",
+                        "primary-container": "#ffe088",
+                        "on-tertiary-fixed-variant": "#27438a",
+                        "on-tertiary-container": "#254188",
+                        "on-error-container": "#410002"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "stack-lg": "32px",
+                        "stack-sm": "8px",
+                        "stack-md": "16px",
+                        "margin-mobile": "20px",
+                        "section-padding": "120px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "label-md": ["Montserrat"],
+                        "label-sm": ["Montserrat"],
+                        "body-lg": ["Montserrat"],
+                        "body-md": ["Montserrat"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-body-md">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-md border-b border-gold-standard/20 shadow-sm">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-gutter h-20">
+<div class="font-headline-md text-headline-md text-gold-standard tracking-tighter">
+                The Smile Hub
+            </div>
+<nav class="hidden md:flex gap-8">
+<a class="font-label-md text-label-md uppercase tracking-widest text-on-surface/80 hover:text-gold-standard transition-colors duration-300" href="/">Home</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-on-surface/80 hover:text-gold-standard transition-colors duration-300" href="/about.html">About</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-on-surface/80 hover:text-gold-standard transition-colors duration-300" href="/services.html">Services</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-on-surface/80 hover:text-gold-standard transition-colors duration-300" href="/clinic.html">Clinic</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-gold-standard border-b-2 border-gold-standard pb-1" href="/contact.html">Contact</a>
+</nav>
+<button class="bg-gold-standard text-white px-6 py-3 font-label-md text-label-md uppercase tracking-widest hover:bg-gold-light hover:shadow-lg transition-all duration-300">
+                Book Appointment
+            </button>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative py-section-padding overflow-hidden bg-white">
+<div class="absolute inset-0 z-0 opacity-5 pointer-events-none">
+<!-- Subtle pattern or radial gradient can go here -->
+</div>
+<div class="max-w-container-max mx-auto px-gutter relative z-10 text-center">
+<div class="flex justify-center mb-6">
+<div class="h-12 w-[2px] bg-gold-standard/40"></div>
+</div>
+<h1 class="font-headline-xl text-headline-xl mb-4 text-on-surface">Connect with Excellence</h1>
+<p class="font-body-lg text-body-lg text-text-muted max-w-2xl mx-auto">
+                    Experience the pinnacle of dental care in a sanctuary designed for your comfort. Your journey to a radiant smile begins with a single conversation.
+                </p>
+</div>
+</section>
+<!-- Contact Grid (Bento Style) -->
+<section class="pb-section-padding bg-white">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Form Container (Left Column Large) -->
+<div class="md:col-span-7 lg:col-span-8">
+<div class="glass-panel p-8 md:p-12 h-full">
+<div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-8">
+<span class="bg-gold-standard/10 text-gold-standard px-3 py-1 text-label-sm uppercase tracking-widest border border-gold-standard/20 inline-block w-fit">Priority Access</span>
+<h2 class="font-headline-lg text-headline-lg text-gold-standard">Request Consultation</h2>
+</div>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-6" id="appointmentForm">
+<div class="flex flex-col gap-2">
+<label class="text-label-sm uppercase text-text-muted">Full Name</label>
+<input class="bg-white border-outline-variant/60 text-on-surface p-4 focus:ring-0 focus:border-gold-standard transition-all outline-none" placeholder="John Doe" type="text">
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-label-sm uppercase text-text-muted">Email Address</label>
+<input class="bg-white border-outline-variant/60 text-on-surface p-4 focus:ring-0 focus:border-gold-standard transition-all outline-none" placeholder="john@example.com" type="email">
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-label-sm uppercase text-text-muted">Phone Number</label>
+<input class="bg-white border-outline-variant/60 text-on-surface p-4 focus:ring-0 focus:border-gold-standard transition-all outline-none" placeholder="+1 (555) 000-0000" type="tel">
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-label-sm uppercase text-text-muted">Service Interest</label>
+<select class="bg-white border-outline-variant/60 text-on-surface p-4 focus:ring-0 focus:border-gold-standard transition-all outline-none appearance-none">
+<option>Cosmetic Dentistry</option>
+<option>Dental Implants</option>
+<option>Invisalign® Treatment</option>
+<option>Smile Makeover</option>
+<option>General Checkup</option>
+</select>
+</div>
+<div class="md:col-span-2 flex flex-col gap-2">
+<label class="text-label-sm uppercase text-text-muted">Personal Message (Optional)</label>
+<textarea class="bg-white border-outline-variant/60 text-on-surface p-4 focus:ring-0 focus:border-gold-standard transition-all outline-none resize-none" placeholder="How can we help you today?" rows="4"></textarea>
+</div>
+<div class="md:col-span-2 pt-4">
+<button class="w-full bg-gold-standard text-white font-label-md text-label-md uppercase tracking-widest py-5 hover:bg-gold-light hover:shadow-xl transition-all duration-300 transform active:scale-[0.98]" type="submit">
+                                        Confirm Priority Booking
+                                    </button>
+</div>
+</form>
+</div>
+</div>
+<!-- Sidebar Info (Right Column Small) -->
+<div class="md:col-span-5 lg:col-span-4 flex flex-col gap-gutter">
+<!-- Clinical Context Image -->
+<div class="relative overflow-hidden group h-64 border border-gold-standard/10">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLuob_XktQzPX8HXqKRK5LMGPOH4rIuz8TJJ0K9lX9lmZ9s7lG9qQsqXx8cgTqRYyS3ChZBW_6Br2-JCjMxovv_iimTRe7oKCcTxvEeq1o2vqE10iAYqTWwzK-0lU07al-WH49aaSKnJhYGMHe4aMvmtluJBHiT_GQG9KFUdS8inO4pHe1zn8ixUrF7p42I2hmD6nVPBrTpGPyAzZtj9yTvkWDRxVJg1CU4gHqPvB-gu32cX9tTqDFDq71WV">
+<div class="absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<p class="text-label-sm text-gold-standard uppercase tracking-tighter mb-1 bg-white/80 w-fit px-2">Modern Diagnostics</p>
+<p class="text-on-surface font-body-md text-sm leading-relaxed font-medium">State-of-the-art imaging for precise aesthetic planning.</p>
+</div>
+</div>
+<!-- Contact Channels Card -->
+<div class="bg-surface-container p-8 border-t-2 border-gold-standard flex flex-col gap-8 shadow-sm">
+<div>
+<h3 class="text-label-md uppercase text-gold-standard mb-6 tracking-widest">Connect Directly</h3>
+<div class="flex flex-col gap-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-gold-standard">call</span>
+<div>
+<p class="text-label-sm text-text-muted uppercase mb-1">Direct Line</p>
+<p class="text-on-surface font-label-md">+1 (234) 567-8900</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-gold-standard">mail</span>
+<div>
+<p class="text-label-sm text-text-muted uppercase mb-1">Email Concierge</p>
+<p class="text-on-surface font-label-md">concierge@luminedental.com</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-gold-standard">schedule</span>
+<div>
+<p class="text-label-sm text-text-muted uppercase mb-1">Practice Hours</p>
+<p class="text-on-surface font-label-md">Mon–Fri: 8AM — 6PM</p>
+<p class="text-on-surface font-label-md">Sat: 9AM — 2PM</p>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-6 border-t border-gold-standard/20">
+<p class="text-label-sm text-text-muted italic">Emergency dental services available for existing patients after hours.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Location & Map Section -->
+<section class="py-section-padding bg-surface-container-low relative">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-4 z-10">
+<div class="mb-8">
+<span class="text-gold-standard text-label-md uppercase tracking-widest block mb-4">The Atelier</span>
+<h2 class="font-headline-lg text-headline-lg mb-6 text-on-surface">Our Clinic</h2>
+<p class="text-body-md text-text-muted mb-8 leading-relaxed">
+                                Located in the heart of the medical district, our clinic offers a private, serene environment tailored for aesthetic excellence. Valet parking available for all patients.
+                            </p>
+<div class="bg-white p-6 border border-gold-standard/20 inline-block shadow-sm">
+<p class="text-on-surface font-body-md">1200 Sapphire Avenue, Suite 400</p>
+<p class="text-on-surface font-body-md">Beverly Hills, CA 90210</p>
+<a class="inline-flex items-center gap-2 text-gold-standard font-label-md uppercase mt-4 hover:gap-4 transition-all" href="#">
+                                    Get Directions <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<div class="lg:col-span-8 relative">
+<!-- Stylized Map Placeholder (Keeping dark map for high luxury contrast vs light page) -->
+<div class="aspect-video w-full bg-[#f0f0f0] relative overflow-hidden group shadow-2xl border border-gold-standard/10">
+<div class="absolute inset-0 opacity-80 mix-blend-multiply grayscale hover:grayscale-0 transition-all duration-700">
+<div class="w-full h-full bg-cover bg-center" data-alt="A stylized professional map view of a metropolitan medical district, featuring sleek roads and minimalist typography." data-location="Beverly Hills, CA" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCYZVc_unHlHEoJwfYcmfcjXEaDWLfL1WQF15KDWDDo28NP6ReAcXHU77WJp6n9ZlT5acxNp5Z3Wlig_CV3U5bcB8n5Lyvt_QnfOo6hF2cmck0SdlBohdvT1bZvCX0ckKd7MATAjU7AhVXP-WU0mfCcuO7pvEvVjAhz3lAtMAD-ibKlcPNcKcWYYvGUia0kdI4WlNfteMru_CyTZRFdvt1R4GdwpaBfNHQLIIsd5FaYfkGj_Oj6XYtoGQy33xf6rypbWl2kl92S-71V')"></div>
+</div>
+<!-- Map Overlay Interactive Hint -->
+<div class="absolute inset-0 flex items-center justify-center bg-white/20 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 cursor-pointer">
+<div class="text-center bg-white/90 p-6 shadow-xl border border-gold-standard/20">
+<span class="material-symbols-outlined text-4xl text-gold-standard mb-2">location_on</span>
+<p class="text-label-md text-gold-standard uppercase tracking-widest">Explore Interactive Map</p>
+</div>
+</div>
+<!-- Marker Pin -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+<div class="w-4 h-4 bg-gold-standard rounded-full animate-ping absolute"></div>
+<div class="w-4 h-4 bg-gold-standard rounded-full relative z-10 shadow-[0_0_20px_rgba(212,175,55,0.6)]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Membership CTA -->
+<section class="py-24 border-t border-gold-standard/10 bg-white">
+<div class="max-w-container-max mx-auto px-gutter text-center">
+<h3 class="font-headline-md text-headline-md mb-4 text-on-surface">The Smile Hub Inner Circle</h3>
+<p class="text-body-md text-text-muted mb-8 max-w-xl mx-auto">Subscribe to receive exclusive insights on cosmetic trends and priority scheduling alerts.</p>
+<div class="flex flex-col sm:flex-row gap-0 max-w-lg mx-auto shadow-sm">
+<input class="flex-grow bg-surface-container-low border border-outline-variant/40 p-4 text-on-surface focus:ring-0 focus:border-gold-standard outline-none" placeholder="Your email address" type="email">
+<button class="bg-gold-standard text-white px-8 py-4 font-label-md text-label-md uppercase tracking-widest hover:bg-gold-light transition-all">Join</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-stack-lg pb-stack-md bg-surface-container border-t border-gold-standard/20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto px-gutter text-center md:text-left">
+<div>
+<div class="font-headline-md text-headline-md text-gold-standard mb-6">The Smile Hub</div>
+<p class="font-body-md text-body-md text-on-surface/70 leading-relaxed">
+                    Setting the gold standard in dental aesthetics. Modern precision. Boutique experience.
+                </p>
+</div>
+<div>
+<h4 class="text-gold-standard font-label-md uppercase tracking-widest mb-6">Menu</h4>
+<ul class="flex flex-col gap-3 font-body-md text-body-md text-on-surface/80">
+<li><a class="hover:text-gold-standard transition-colors" href="#">Our Doctors</a></li>
+<li><a class="hover:text-gold-standard transition-colors" href="#">Treatments</a></li>
+<li><a class="hover:text-gold-standard transition-colors" href="#">Gallery</a></li>
+<li><a class="hover:text-gold-standard transition-colors" href="#">Blog</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-gold-standard font-label-md uppercase tracking-widest mb-6">Legal</h4>
+<ul class="flex flex-col gap-3 font-body-md text-body-md text-on-surface/80">
+<li><a class="hover:text-gold-standard transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-gold-standard transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-gold-standard transition-colors" href="#">Accessibility</a></li>
+<li><a class="hover:text-gold-standard transition-colors" href="#">Patient Portal</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-gold-standard font-label-md uppercase tracking-widest mb-6">Follow Us</h4>
+<div class="flex justify-center md:justify-start gap-4">
+<a class="w-10 h-10 border border-gold-standard/20 flex items-center justify-center text-gold-standard hover:bg-gold-standard hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+<a class="w-10 h-10 border border-gold-standard/20 flex items-center justify-center text-gold-standard hover:bg-gold-standard hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-sm">camera</span>
+</a>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter mt-16 pt-8 border-t border-gold-standard/10 text-center">
+<p class="font-body-md text-body-md text-on-surface/50">
+                © 2024 The Smile Hub. Excellence in Modern Dentistry.
+            </p>
+</div>
+</footer>
+<script>
+        document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'Transmitting Request...';
+            btn.classList.add('opacity-70', 'cursor-not-allowed');
+            
+            setTimeout(() => {
+                btn.innerText = 'Request Sent Successfully';
+                btn.classList.remove('bg-gold-standard');
+                btn.classList.add('bg-green-600', 'text-white');
+                
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.remove('bg-green-600', 'text-white', 'opacity-70', 'cursor-not-allowed');
+                    btn.classList.add('bg-gold-standard');
+                    e.target.reset();
+                }, 3000);
+            }, 1500);
+        });
+
+        // Hover animations for cards
+        const cards = document.querySelectorAll('.glass-panel');
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+<div id="mobile-menu" class="fixed inset-0 bg-background z-40 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col pt-24 px-gutter shadow-2xl overflow-y-auto">
+            <button id="close-menu-btn" class="absolute top-6 right-gutter text-gold-standard p-2 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <div class="flex flex-col mt-8">
+                <a href="/" class="block text-xl font-headline text-on-surface hover:text-gold-standard py-4 border-b border-gold-standard/10">Home</a><a href="/about.html" class="block text-xl font-headline text-on-surface hover:text-gold-standard py-4 border-b border-gold-standard/10">About</a><a href="/services.html" class="block text-xl font-headline text-on-surface hover:text-gold-standard py-4 border-b border-gold-standard/10">Services</a><a href="/clinic.html" class="block text-xl font-headline text-on-surface hover:text-gold-standard py-4 border-b border-gold-standard/10">Clinic</a><a href="/contact.html" class="block text-xl font-headline text-on-surface hover:text-gold-standard py-4 border-b border-gold-standard/10">Contact</a>
+            </div>
+            <div class="mt-8 mb-8">
+                <button class="w-full bg-gold-standard text-white py-4 rounded-four uppercase tracking-widest font-bold">Book Appointment</button>
+            </div>
+        </div><script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const menuBtn = document.getElementById('mobile-menu-btn');
+                const closeBtn = document.getElementById('close-menu-btn');
+                const mobileMenu = document.getElementById('mobile-menu');
+                
+                if(menuBtn && closeBtn && mobileMenu) {
+                    menuBtn.addEventListener('click', () => {
+                        mobileMenu.classList.remove('translate-x-full');
+                    });
+                    closeBtn.addEventListener('click', () => {
+                        mobileMenu.classList.add('translate-x-full');
+                    });
+                }
+            });
+        </script></body></html>
