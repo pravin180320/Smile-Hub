@@ -130,8 +130,14 @@
             }
         }
     </script>
+<style data-purpose="mobile-heading-fixes">
+@media (max-width: 767px) {
+  .text-headline-xl { font-size: 36px !important; line-height: 1.15 !important; }
+  .text-headline-lg { font-size: 30px !important; line-height: 1.2 !important; }
+}
+</style>
 </head>
-<body class="font-body-md">
+<body class="font-body-md overflow-x-hidden">
 <!-- Top Navigation Bar -->
 <header class="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-md border-b border-gold-standard/20 shadow-sm">
 <div class="flex justify-between items-center max-w-container-max mx-auto px-gutter h-20">
@@ -145,9 +151,10 @@
 <a class="font-label-md text-label-md uppercase tracking-widest text-on-surface/80 hover:text-gold-standard transition-colors duration-300" href="/clinic.html">Clinic</a>
 <a class="font-label-md text-label-md uppercase tracking-widest text-gold-standard border-b-2 border-gold-standard pb-1" href="/contact.html">Contact</a>
 </nav>
-<button class="bg-gold-standard text-white px-6 py-3 font-label-md text-label-md uppercase tracking-widest hover:bg-gold-light hover:shadow-lg transition-all duration-300">
+<button class="bg-gold-standard text-white px-6 py-3 font-label-md text-label-md uppercase tracking-widest hover:bg-gold-light hover:shadow-lg transition-all duration-300 hidden md:inline-block">
                 Book Appointment
             </button>
+<button id="mobile-menu-btn" class="md:hidden text-gold-standard p-2 focus:outline-none"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
 </div>
 </header>
 <main class="pt-20">

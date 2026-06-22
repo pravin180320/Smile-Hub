@@ -135,8 +135,14 @@
             transform: translateY(0);
         }
     </style>
+<style data-purpose="mobile-heading-fixes">
+@media (max-width: 767px) {
+  .text-headline-xl { font-size: 36px !important; line-height: 1.15 !important; }
+  .text-headline-lg { font-size: 30px !important; line-height: 1.2 !important; }
+}
+</style>
 </head>
-<body class="font-body-md selection:bg-gold-standard selection:text-white">
+<body class="font-body-md selection:bg-gold-standard selection:text-white overflow-x-hidden">
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gold-standard/20 shadow-sm transition-all duration-300 ease-in-out">
 <div class="flex justify-between items-center max-w-container-max mx-auto px-gutter h-20">
